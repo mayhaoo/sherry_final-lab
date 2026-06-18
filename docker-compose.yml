@@ -8,11 +8,11 @@ services:
     restart: unless-stopped
 
   # 服务2：GitHub开源Todo应用 SmartTodo
-  todo-app:
-    image: ghcr.io/lizec123/smart-todo:latest
+  tasktrove:
+    image: ghcr.io/dohsimpson/tasktrove:latest
     pull_policy: always
     ports:
-      - "8082:80"
+      - "8082:3000"
     volumes:
-      - ./todo-data:/app/data
+      - ./tasktrove-data:/app/data
     restart: unless-stopped
