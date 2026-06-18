@@ -7,10 +7,12 @@ services:
       - "8081:80"
     restart: unless-stopped
 
-  # 服务2：开源Todo应用（官方开源todo）
+  # 服务2：GitHub开源Todo应用 SmartTodo
   todo-app:
-    image: docker/getting-started
+    image: ghcr.io/lizec123/smart-todo:latest
     pull_policy: always
     ports:
       - "8082:80"
+    volumes:
+      - ./todo-data:/app/data
     restart: unless-stopped
