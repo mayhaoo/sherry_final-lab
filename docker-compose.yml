@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  # 服务1：你的个人网站
+  personal-site:
+    image: mayxu111/my-personal-site:latest
+    pull_policy: always
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
+  # 服务2：开源Todo应用（官方开源todo）
+  todo-app:
+    image: mayxu111/my-todo-app:latest
+    pull_policy: always
+    ports:
+      - "8082:80"
+    restart: unless-stopped
